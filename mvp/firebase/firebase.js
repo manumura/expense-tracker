@@ -20,17 +20,20 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
-// Configure Firebase.
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyB8xMPCyes3GGvxz0-ig2jbwqdpBDKB1Rk",
-  authDomain: "expensetracker-5501a.firebaseapp.com",
-  projectId: "expensetracker-5501a",
-  storageBucket: "expensetracker-5501a.appspot.com",
-  messagingSenderId: "989666135103",
-  appId: "1:989666135103:web:a69eef7ce191eb52dffc8a",
-  measurementId: "G-YVP679EBHY"
+  apiKey: "AIzaSyDNqPm6LUsZS172Pe0qsv_QsBXorHFIlL8",
+  authDomain: "nextjs-expense-tracker.firebaseapp.com",
+  projectId: "nextjs-expense-tracker",
+  storageBucket: "nextjs-expense-tracker.appspot.com",
+  messagingSenderId: "608963994",
+  appId: "1:608963994:web:b3865abefe6a7adde03e23",
+  measurementId: "G-KTMSCQQ232"
 };
 
+// Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
