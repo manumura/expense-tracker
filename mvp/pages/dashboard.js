@@ -80,9 +80,9 @@ export default function Dashboard() {
   }, [authUser, isLoading])
 
   // Get receipts once user is logged in
-  useEffect(async () => {
+  useEffect(() => {
     if (authUser) {
-      const unsubscribe = await getReceipts(authUser.uid, setReceipts, setIsLoadingReceipts);
+      const unsubscribe = getReceipts(authUser.uid, setReceipts, setIsLoadingReceipts);
       return () => unsubscribe();
     }
   }, [authUser])

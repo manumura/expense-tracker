@@ -49,7 +49,7 @@ export function addReceipt(uid, date, locationName, address, items, amount, imag
  - locationName: name of location
  - uid: user id of which the receipt is for
 */
-export async function getReceipts(uid, setReceipts, setIsLoadingReceipts) {
+export function getReceipts(uid, setReceipts, setIsLoadingReceipts) {
   const receiptsQuery = query(collection(db, RECEIPT_COLLECTION), where("uid", "==", uid), orderBy("date", "desc"));
 
   const unsubscribe = onSnapshot(receiptsQuery, async (snapshot) => {
