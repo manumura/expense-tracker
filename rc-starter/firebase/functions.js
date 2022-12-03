@@ -15,10 +15,7 @@
  * limitations under the License.
  */
 
-const path = require('path')
+import { getFunctions, httpsCallable } from "firebase/functions";
 
-module.exports = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
-}
+const functions = getFunctions();
+export const processImage = httpsCallable(functions, 'processImage');

@@ -15,10 +15,7 @@
  * limitations under the License.
  */
 
-const path = require('path')
+import { activate, isSupported, fetchAndActivate, fetchConfig, getValue } from 'firebase/remote-config';
+import { remoteConfig } from './firebase';
 
-module.exports = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
-}
+export let ocrFeatureFlag = false;

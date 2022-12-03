@@ -31,13 +31,13 @@ export async function uploadImage(image, uid) {
 }
 
 // Replaces existing image in storage and returns the storage bucket
-export function replaceImage(image, bucket) {
-  uploadBytes(ref(storage, bucket), image);
+export async function replaceImage(image, bucket) {
+  await uploadBytes(ref(storage, bucket), image);
 }
 
 // Deletes existing image in storage
-export function deleteImage(bucket) {
-  deleteObject(ref(storage, bucket));
+export async function deleteImage(bucket) {
+  await deleteObject(ref(storage, bucket));
 }
 
 // Gets the download URL from the reference URL
